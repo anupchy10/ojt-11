@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Operation</title>
+</head>
+<body>
+
+<script>
+  function performOperation(a, b, operation) {
+    switch(operation) {
+      case 'add':
+        return a + b;
+      case 'sub': 
+        return a - b;
+      case 'multiply': 
+        return a * b;
+      case 'divide':
+        return a / b;
+      case 'remainder':
+        return a % b;
+      default:
+        console.log('Invalid operation!');
+        console.log('Try: add, sub, multiply, divide, remainder');
+        return null;
+    }
+  }
+
+  console.log(performOperation(3, 5, 'sub'));      
+</script>
+
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+        const students = [
+        { name: "Ram", score: 35 },
+        { name: "Sita", score: 80 },
+        { name: "Hari", score: 60 }
+        ];
+
+        const names = students
+        .filter(student => student.score > 40)
+        .map(student => student.name);
+        console.log(names);
+    </script>
+</body>
+</html>
