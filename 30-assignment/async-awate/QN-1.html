@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+        function asyncFunction() {
+            return new Promise((resolve) => {
+                setTimeout(() => {
+                resolve("Run after 1 second");
+                }, 1000);
+            });
+        }
+
+        async function result() {
+            const result = await asyncFunction();
+            return result;
+        }
+        
+        result().then((message) => {
+            console.log(message);
+        });
+        
+        console.log('This statement run first');
+    </script>
+</body>
+</html>

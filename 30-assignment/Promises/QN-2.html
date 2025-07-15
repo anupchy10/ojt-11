@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Document</title>
+</head>
+<body>
+
+  <p class="demo"></p>
+
+  <script>
+    function promise() {
+      return new Promise((resolve, reject) => {
+        setTimeout(() => {
+          const success = false;
+          if (success) {
+            resolve("Run after 1 second");
+          } else {
+            reject("Something went wrong!");
+          }
+        }, 1000);
+      });
+    }
+
+    promise()
+      .then((message) => {
+        document.querySelector('.demo').innerHTML = message;
+      })
+      .catch((error) => {
+        document.querySelector('.demo').innerHTML = `Error: ${error}`;
+      });
+  </script>
+
+</body>
+</html>
